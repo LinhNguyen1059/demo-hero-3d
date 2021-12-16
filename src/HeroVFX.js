@@ -36,36 +36,66 @@ function HeroVFX({ ...props }) {
     shoesNormalMap,
     shoesRoughnessMap,
   ] = useTexture([
-    "arm/arm_BaseColor.png",
-    "arm/arm_Metallic.png",
-    "arm/arm_Normal.png",
-    "arm/arm_Roughness.png",
-    "bodyarmor/bodyarmor_BaseColor.png",
-    "bodyarmor/bodyarmor_Metallic.png",
-    "bodyarmor/bodyarmor_Normal.png",
-    "bodyarmor/bodyarmor_Roughness.png",
-    "bodyarmor/bodyarmor_Emissive.png",
-    "pant/pant_BaseColor.png",
-    "pant/pant_Metallic.png",
-    "pant/pant_Normal.png",
-    "pant/pant_Roughness.png",
-    "belt/belt_BaseColor.png",
-    "belt/belt_Metallic.png",
-    "belt/belt_Normal.png",
-    "belt/belt_Roughness.png",
-    "cloak/cloak_BaseColor.png",
-    "cloak/cloak_Metallic.png",
-    "cloak/cloak_Normal.png",
-    "cloak/cloak_Roughness.png",
-    "helmet/helmet_BaseColor.png",
-    "helmet/helmet_Metallic.png",
-    "helmet/helmet_Normal.png",
-    "helmet/helmet_Roughness.png",
-    "shoes/shoes_BaseColor.png",
-    "shoes/shoes_Metallic.png",
-    "shoes/shoes_Normal.png",
-    "shoes/shoes_Roughness.png",
+    "shaman/arm/arm_BaseColor.png",
+    "shaman/arm/arm_Metallic.png",
+    "shaman/arm/arm_Normal.png",
+    "shaman/arm/arm_Roughness.png",
+    "shaman/bodyarmor/bodyarmor_BaseColor.png",
+    "shaman/bodyarmor/bodyarmor_Metallic.png",
+    "shaman/bodyarmor/bodyarmor_Normal.png",
+    "shaman/bodyarmor/bodyarmor_Roughness.png",
+    "shaman/bodyarmor/bodyarmor_Emissive.png",
+    "shaman/pant/pant_BaseColor.png",
+    "shaman/pant/pant_Metallic.png",
+    "shaman/pant/pant_Normal.png",
+    "shaman/pant/pant_Roughness.png",
+    "shaman/belt/belt_BaseColor.png",
+    "shaman/belt/belt_Metallic.png",
+    "shaman/belt/belt_Normal.png",
+    "shaman/belt/belt_Roughness.png",
+    "shaman/cloak/cloak_BaseColor.png",
+    "shaman/cloak/cloak_Metallic.png",
+    "shaman/cloak/cloak_Normal.png",
+    "shaman/cloak/cloak_Roughness.png",
+    "shaman/helmet/helmet_BaseColor.png",
+    "shaman/helmet/helmet_Metallic.png",
+    "shaman/helmet/helmet_Normal.png",
+    "shaman/helmet/helmet_Roughness.png",
+    "shaman/shoes/shoes_BaseColor.png",
+    "shaman/shoes/shoes_Metallic.png",
+    "shaman/shoes/shoes_Normal.png",
+    "shaman/shoes/shoes_Roughness.png",
   ]);
+
+  armColorMap.flipY = false;
+  armMetalnessMap.flipY = false;
+  armNormalMap.flipY = false;
+  armRoughnessMap.flipY = false;
+  bodyArmorColorMap.flipY = false;
+  bodyArmorMetalnessMap.flipY = false;
+  bodyArmorNormalMap.flipY = false;
+  bodyArmorRoughnessMap.flipY = false;
+  bodyArmorEmissiveMap.flipY = false;
+  pantColorMap.flipY = false;
+  pantMetalnessMap.flipY = false;
+  pantNormalMap.flipY = false;
+  pantRoughnessMap.flipY = false;
+  beltColorMap.flipY = false;
+  beltMetalnessMap.flipY = false;
+  beltNormalMap.flipY = false;
+  beltRoughnessMap.flipY = false;
+  cloakColorMap.flipY = false;
+  cloakMetalnessMap.flipY = false;
+  cloakNormalMap.flipY = false;
+  cloakRoughnessMap.flipY = false;
+  helmetColorMap.flipY = false;
+  helmetMetalnessMap.flipY = false;
+  helmetNormalMap.flipY = false;
+  helmetRoughnessMap.flipY = false;
+  shoesColorMap.flipY = false;
+  shoesMetalnessMap.flipY = false;
+  shoesNormalMap.flipY = false;
+  shoesRoughnessMap.flipY = false;
 
   return (
     <group ref={group} {...props} dispose={null}>
