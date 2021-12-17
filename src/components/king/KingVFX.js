@@ -147,6 +147,12 @@ function KingVFX({ ...props }) {
   bodyRoughnessMap.flipY = false;
   bodyAOMap.flipY = false;
   bodyDisplacementMap.flipY = false;
+  pantColorMap.flipY = false;
+  pantMetalnessMap.flipY = false;
+  pantNormalMap.flipY = false;
+  pantRoughnessMap.flipY = false;
+  pantAOMap.flipY = false;
+  pantDisplacementMap.flipY = false;
 
   return (
     <group ref={group} {...props} dispose={null}>
