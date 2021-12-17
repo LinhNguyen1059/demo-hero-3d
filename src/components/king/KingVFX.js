@@ -150,11 +150,7 @@ function KingVFX({ ...props }) {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <group
-        position={[0, -0.6, 0]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0.01}
-      >
+      <group position={[0, -1, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.015}>
         <primitive object={nodes.Brine_Vua_rig_v1World} />
         <skinnedMesh
           geometry={nodes.Brine_Vua_rig_v1arm_mesh.geometry}

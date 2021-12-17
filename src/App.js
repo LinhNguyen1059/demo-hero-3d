@@ -1,6 +1,12 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
+import {
+  ContactShadows,
+  Environment,
+  Html,
+  OrbitControls,
+  useProgress,
+} from "@react-three/drei";
 
 import Hero from "./Hero";
 import HeroVFX from "./HeroVFX";
@@ -23,6 +29,11 @@ export default function App() {
     }
   };
 
+  function Loader() {
+    const { active, progress, errors, item, loaded, total } = useProgress();
+    return <Html center>Loading...</Html>;
+  }
+
   return (
     <div style={{ height: "100vh" }}>
       <div className="button-container">
@@ -30,38 +41,30 @@ export default function App() {
           King
         </div>
         <div className="button" onClick={() => setHero("KingVFX")}>
-          King VFX
+          King Pose
         </div>
       </div>
       <Canvas shadows dpr={[1, 2]} camera={{ fov: 30 }}>
         <ambientLight intensity={0.2} />
-        {/* <spotLight
-          intensity={0.5}
-          angle={0.1}
-          penumbra={1}
-          position={[10, 0, 10]}
-          castShadow
-        />
-        <spotLight
-          intensity={0.5}
-          angle={0.1}
-          penumbra={1}
-          position={[-10, 0, 10]}
-          castShadow
-        /> */}
-        <pointLight position={[0, 60, -100]} intensity={1} />
-        <pointLight position={[-50, 0, -50]} intensity={0.5} />
+        <pointLight position={[0, 60, -100]} intensity={0.5} />
+        <pointLight position={[-50, 0, -50]} intensity={0.3} />
+        <pointLight position={[-50, 0, 50]} intensity={0.3} />
+        <pointLight position={[50, -50, 50]} intensity={0.3} />
+        <pointLight position={[50, -50, 50]} intensity={0.3} />
+        <pointLight position={[0, -10, 10]} intensity={0.3} />
+        <pointLight position={[50, 0, 1]} intensity={0.3} />
         <spotLight
           castShadow
           intensity={1}
           angle={Math.PI / 10}
-          position={[10, 10, 10]}
+          position={[0, -60, 100]}
+          penumbra={1}
           shadow-mapSize-width={2048}
           shadow-mapSize-height={2048}
         />
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           {renderHeroComponent()}
-          <Environment preset="city" />
+          <Environment preset="city" background />
           <ContactShadows
             rotation-x={Math.PI / 2}
             position={[0, -0.8, 0]}
