@@ -64,7 +64,7 @@ export default function App() {
         />
         <Suspense fallback={<Loader />}>
           {renderHeroComponent()}
-          <Environment preset="city" background />
+          <Environment preset="sunset" background />
           <ContactShadows
             rotation-x={Math.PI / 2}
             position={[0, -0.8, 0]}
