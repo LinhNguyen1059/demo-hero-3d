@@ -12,6 +12,7 @@ import Hero from "./Hero";
 import HeroVFX from "./HeroVFX";
 import King from "./components/king/King";
 import KingVFX from "./components/king/KingVFX";
+import KingMotion from "./components/king/KingMotion";
 
 import "./App.css";
 
@@ -24,6 +25,8 @@ export default function App() {
         return <King />;
       case "KingVFX":
         return <KingVFX />;
+      case "KingMotion":
+        return <KingMotion />;
       default:
         break;
     }
@@ -42,6 +45,9 @@ export default function App() {
         </div>
         <div className="button" onClick={() => setHero("KingVFX")}>
           King Pose
+        </div>
+        <div className="button" onClick={() => setHero("KingMotion")}>
+          King Motion
         </div>
       </div>
       <Canvas shadows dpr={[1, 2]} camera={{ fov: 30 }}>
