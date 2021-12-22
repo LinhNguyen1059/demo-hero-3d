@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { useGLTF, useAnimations, useTexture } from "@react-three/drei";
+import { useGLTF, useAnimations, useTexture, Html } from "@react-three/drei";
 import { useEffect } from "react";
 
 function KingMotion({ ...props }) {
@@ -87,52 +87,52 @@ function KingMotion({ ...props }) {
     tridentLayer6RoughnessMap,
     tridentLayer6AOMap,
   ] = useTexture([
-    "king/arm/arm_Base_Color.png",
-    "king/arm/arm_Metallic.png",
-    "king/arm/arm_Normal_OpenGL.png",
-    "king/arm/arm_Roughness.png",
+    "king2/arm/arm_Base_Color.png",
+    "king2/arm/arm_Metallic.png",
+    "king2/arm/arm_Normal.png",
+    "king2/arm/arm_Roughness.png",
     "king/arm/arm_Mixed_AO.png",
     "king/arm/arm_Height.png",
-    "king/bodyarmor/bodyarmor_Base_Color.png",
-    "king/bodyarmor/bodyarmor_Metallic.png",
-    "king/bodyarmor/bodyarmor_Normal_OpenGL.png",
-    "king/bodyarmor/bodyarmor_Roughness.png",
+    "king2/bodyarmor/bodyarmor_Base_Color.png",
+    "king2/bodyarmor/bodyarmor_Metallic.png",
+    "king2/bodyarmor/bodyarmor_Normal.png",
+    "king2/bodyarmor/bodyarmor_Roughness.png",
     "king/bodyarmor/bodyarmor_Mixed_AO.png",
     "king/bodyarmor/bodyarmor_Height.png",
-    "king/pant/pant_Base_Color.png",
-    "king/pant/pant_Metallic.png",
-    "king/pant/pant_Normal_OpenGL.png",
-    "king/pant/pant_Roughness.png",
+    "king2/pant/pant_Base_Color.png",
+    "king2/pant/pant_Metallic.png",
+    "king2/pant/pant_Normal_OpenGL.png",
+    "king2/pant/pant_Roughness.png",
     "king/pant/pant_Mixed_AO.png",
     "king/pant/pant_Height.png",
-    "king/cloak/cloak_Base_Color.png",
-    "king/cloak/cloak_Metallic.png",
-    "king/cloak/cloak_Normal_OpenGL.png",
-    "king/cloak/cloak_Roughness.png",
+    "king2/cloak/cloak_Base_Color.png",
+    "king2/cloak/cloak_Metallic.png",
+    "king2/cloak/cloak_Normal_OpenGL.png",
+    "king2/cloak/cloak_Roughness.png",
     "king/cloak/cloak_Mixed_AO.png",
     "king/cloak/cloak_Height.png",
-    "king/helmet/helmet_Base_Color.png",
-    "king/helmet/helmet_Metallic.png",
-    "king/helmet/helmet_Normal_OpenGL.png",
-    "king/helmet/helmet_Roughness.png",
+    "king2/helmet/helmet_Base_Color.png",
+    "king2/helmet/helmet_Metallic.png",
+    "king2/helmet/helmet_Normal.png",
+    "king2/helmet/helmet_Roughness.png",
     "king/helmet/helmet_Mixed_AO.png",
     "king/helmet/helmet_Height.png",
-    "king/belt/belt_Base_Color.png",
-    "king/belt/belt_Metallic.png",
-    "king/belt/belt_Normal_OpenGL.png",
-    "king/belt/belt_Roughness.png",
+    "king2/belt/belt_Base_Color.png",
+    "king2/belt/belt_Metallic.png",
+    "king2/belt/belt_Normal.png",
+    "king2/belt/belt_Roughness.png",
     "king/belt/belt_Mixed_AO.png",
     "king/belt/belt_Height.png",
-    "king/shoes/shoes_Base_Color.png",
-    "king/shoes/shoes_Metallic.png",
-    "king/shoes/shoes_Normal_OpenGL.png",
-    "king/shoes/shoes_Roughness.png",
+    "king2/shoes/shoes_Base_Color.png",
+    "king2/shoes/shoes_Metallic.png",
+    "king2/shoes/shoes_Normal_OpenGL.png",
+    "king2/shoes/shoes_Roughness.png",
     "king/shoes/shoes_Mixed_AO.png",
     "king/shoes/shoes_Height.png",
-    "king/body/body_Base_Color.png",
-    "king/body/body_Metallic.png",
-    "king/body/body_Normal_OpenGL.png",
-    "king/body/body_Roughness.png",
+    "king2/body/body_Base_Color.png",
+    "king2/body/body_Metallic.png",
+    "king2/body/body_Normal.png",
+    "king2/body/body_Roughness.png",
     "king/body/body_Mixed_AO.png",
     "king/body/body_Height.png",
 
@@ -248,7 +248,7 @@ function KingMotion({ ...props }) {
             normalMap={armNormalMap}
             roughnessMap={armRoughnessMap}
             metalnessMap={armMetalnessMap}
-            aoMap={armAOMap}
+            // aoMap={armAOMap}
             // displacementMap={armDisplacementMap}
           />
         </skinnedMesh>
@@ -264,7 +264,7 @@ function KingMotion({ ...props }) {
             normalMap={beltNormalMap}
             roughnessMap={beltRoughnessMap}
             metalnessMap={beltMetalnessMap}
-            aoMap={beltAOMap}
+            // aoMap={beltAOMap}
             // displacementMap={beltDisplacementMap}
           />
         </skinnedMesh>
@@ -280,7 +280,7 @@ function KingMotion({ ...props }) {
             normalMap={bodyNormalMap}
             roughnessMap={bodyRoughnessMap}
             metalnessMap={bodyMetalnessMap}
-            aoMap={bodyAOMap}
+            // aoMap={bodyAOMap}
             // displacementMap={bodyDisplacementMap}
           />
         </skinnedMesh>
@@ -296,7 +296,7 @@ function KingMotion({ ...props }) {
             normalMap={bodyNormalMap}
             roughnessMap={bodyRoughnessMap}
             metalnessMap={bodyMetalnessMap}
-            aoMap={bodyAOMap}
+            // aoMap={bodyAOMap}
             // displacementMap={bodyDisplacementMap}
           />
         </skinnedMesh>
@@ -312,7 +312,7 @@ function KingMotion({ ...props }) {
             normalMap={bodyArmorNormalMap}
             roughnessMap={bodyArmorRoughnessMap}
             metalnessMap={bodyArmorMetalnessMap}
-            aoMap={bodyArmorAOMap}
+            // aoMap={bodyArmorAOMap}
             // displacementMap={bodyArmorDisplacementMap}
           />
         </skinnedMesh>
@@ -328,7 +328,7 @@ function KingMotion({ ...props }) {
             normalMap={cloakNormalMap}
             roughnessMap={cloakRoughnessMap}
             metalnessMap={cloakMetalnessMap}
-            aoMap={cloakAOMap}
+            // aoMap={cloakAOMap}
             // displacementMap={cloakDisplacementMap}
           />
         </skinnedMesh>
@@ -344,7 +344,7 @@ function KingMotion({ ...props }) {
             normalMap={helmetNormalMap}
             roughnessMap={helmetRoughnessMap}
             metalnessMap={helmetMetalnessMap}
-            aoMap={helmetAOMap}
+            // aoMap={helmetAOMap}
             // displacementMap={helmetDisplacementMap}
           />
         </skinnedMesh>
@@ -360,7 +360,7 @@ function KingMotion({ ...props }) {
             normalMap={pantNormalMap}
             roughnessMap={pantRoughnessMap}
             metalnessMap={pantMetalnessMap}
-            aoMap={pantAOMap}
+            // aoMap={pantAOMap}
             // displacementMap={pantDisplacementMap}
           />
         </skinnedMesh>
@@ -376,11 +376,12 @@ function KingMotion({ ...props }) {
             normalMap={shoesNormalMap}
             roughnessMap={shoesRoughnessMap}
             metalnessMap={shoesMetalnessMap}
-            aoMap={shoesAOMap}
+            // aoMap={shoesAOMap}
             // displacementMap={shoesDisplacementMap}
           />
         </skinnedMesh>
       </group>
+
       <group position={[0, -1, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.015}>
         <primitive object={nodes.World_1} />
         <skinnedMesh

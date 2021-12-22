@@ -29,3 +29,9 @@
   justify-content: center;
   margin-right: 10px;
 }
+
+.canvas-container {
+  /* width: 500px;
+  height: 750px; */
+  height: 100%;
+}
