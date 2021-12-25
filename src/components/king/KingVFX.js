@@ -336,7 +336,7 @@ function KingVFX({ colorBases, ...props }) {
             normalMap={armNormalMap}
             roughnessMap={armRoughnessMap}
             metalnessMap={armMetalnessMap}
-            aoMap={armAOMap}
+            // aoMap={armAOMap}
             // displacementMap={armDisplacementMap}
           />
         </skinnedMesh>
@@ -352,7 +352,7 @@ function KingVFX({ colorBases, ...props }) {
             normalMap={beltNormalMap}
             roughnessMap={beltRoughnessMap}
             metalnessMap={beltMetalnessMap}
-            aoMap={beltAOMap}
+            // aoMap={beltAOMap}
             // displacementMap={beltDisplacementMap}
           />
         </skinnedMesh>
@@ -368,7 +368,7 @@ function KingVFX({ colorBases, ...props }) {
             normalMap={bodyNormalMap}
             roughnessMap={bodyRoughnessMap}
             metalnessMap={bodyMetalnessMap}
-            aoMap={bodyAOMap}
+            // aoMap={bodyAOMap}
             // displacementMap={bodyDisplacementMap}
           />
         </skinnedMesh>
@@ -384,7 +384,7 @@ function KingVFX({ colorBases, ...props }) {
             normalMap={bodyNormalMap}
             roughnessMap={bodyRoughnessMap}
             metalnessMap={bodyMetalnessMap}
-            aoMap={bodyAOMap}
+            // aoMap={bodyAOMap}
             // displacementMap={bodyDisplacementMap}
           />
         </skinnedMesh>
@@ -400,7 +400,7 @@ function KingVFX({ colorBases, ...props }) {
             normalMap={bodyArmorNormalMap}
             roughnessMap={bodyArmorRoughnessMap}
             metalnessMap={bodyArmorMetalnessMap}
-            aoMap={bodyArmorAOMap}
+            // aoMap={bodyArmorAOMap}
             // displacementMap={bodyArmorDisplacementMap}
           />
         </skinnedMesh>
@@ -416,7 +416,7 @@ function KingVFX({ colorBases, ...props }) {
             normalMap={cloakNormalMap}
             roughnessMap={cloakRoughnessMap}
             metalnessMap={cloakMetalnessMap}
-            aoMap={cloakAOMap}
+            // aoMap={cloakAOMap}
             // displacementMap={cloakDisplacementMap}
           />
         </skinnedMesh>
@@ -432,7 +432,7 @@ function KingVFX({ colorBases, ...props }) {
             normalMap={helmetNormalMap}
             roughnessMap={helmetRoughnessMap}
             metalnessMap={helmetMetalnessMap}
-            aoMap={helmetAOMap}
+            // aoMap={helmetAOMap}
             // displacementMap={helmetDisplacementMap}
           />
         </skinnedMesh>
@@ -448,7 +448,7 @@ function KingVFX({ colorBases, ...props }) {
             normalMap={pantNormalMap}
             roughnessMap={pantRoughnessMap}
             metalnessMap={pantMetalnessMap}
-            aoMap={pantAOMap}
+            // aoMap={pantAOMap}
             // displacementMap={pantDisplacementMap}
           />
         </skinnedMesh>
@@ -464,7 +464,7 @@ function KingVFX({ colorBases, ...props }) {
             normalMap={shoesNormalMap}
             roughnessMap={shoesRoughnessMap}
             metalnessMap={shoesMetalnessMap}
-            aoMap={shoesAOMap}
+            // aoMap={shoesAOMap}
             // displacementMap={shoesDisplacementMap}
           />
         </skinnedMesh>

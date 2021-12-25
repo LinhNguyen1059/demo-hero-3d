@@ -78,12 +78,13 @@ export default function App() {
     setTimeout(() => {
       const canvas = canvasRef.current;
       const dataURL = canvas.toDataURL();
-      // const link = document.createElement("a");
-      // link.download = "king.png";
-      // link.href = dataURL;
-      // link.click();
-      const file = dataURLToBlob(dataURL);
-      console.log(file);
+      const link = document.createElement("a");
+      link.download = "king.png";
+      link.href = dataURL;
+      link.click();
+      // const file = dataURLToBlob(dataURL);
+      // var url = window.URL.createObjectURL(file);
+      // window.open(url);
     }, 1000);
   };
 
@@ -91,17 +92,6 @@ export default function App() {
 
   return (
     <div style={{ height: "100vh" }}>
-      {/* <div className="button-container">
-        <div className="button" onClick={() => setHero("King")}>
-          King
-        </div>
-        <div className="button" onClick={() => setHero("KingVFX")}>
-          King Pose
-        </div>
-        <div className="button" onClick={() => setHero("KingMotion")}>
-          King Motion
-        </div>
-      </div> */}
       <div className="canvas-container">
         <Canvas
           shadows
@@ -110,43 +100,9 @@ export default function App() {
           ref={canvasRef}
           gl={{ preserveDrawingBuffer: true }}
         >
-          <ambientLight intensity={0.7} />
-          {/* <pointLight position={[0, 60, -100]} intensity={0.3} /> */}
-          {/* <pointLight position={[-50, 0, -50]} intensity={0.3} /> */}
-          {/* <pointLight position={[-50, 0, 50]} intensity={0.3} /> */}
-          {/* <pointLight position={[50, -50, 50]} intensity={0.3} /> */}
-          {/* <pointLight position={[0, -50, 50]} intensity={0.3} /> */}
-          {/* <pointLight position={[50, 0, 1]} intensity={0.3} /> */}
-          {/* <spotLight
-            castShadow
-            intensity={1}
-            angle={0.3}
-            position={[-50, 0, -50]}
-            penumbra={0}
-          />
+          <ambientLight intensity={0.5} />
           <spotLight
-            castShadow
-            intensity={1}
-            angle={0.5}
-            position={[0, -50, 50]}
-            penumbra={0}
-          />
-          <spotLight
-            castShadow
-            intensity={1}
-            angle={0.5}
-            position={[50, 0, 50]}
-            penumbra={0}
-          />
-          <spotLight
-            castShadow
-            intensity={1}
-            angle={0.5}
-            position={[50, -50, -50]}
-            penumbra={0}
-          /> */}
-          <spotLight
-            intensity={0.5}
+            intensity={0.1}
             angle={0.1}
             penumbra={1}
             position={[10, 15, 10]}
@@ -176,7 +132,7 @@ export default function App() {
           />
         </Canvas>
       </div>
-      <button onClick={onExportCanvas}>export</button>
+      {/* <button onClick={onExportCanvas}>export</button> */}
     </div>
   );
 }
