@@ -149,8 +149,8 @@ function KingMotion({ ...props }) {
   ]);
 
   useEffect(() => {
-    actions["ExportGrp.001|Take 001|BaseLayer"].play();
-    actions["ExportGrp|Take 001|BaseLayer"].play();
+    actions["ExportGrp.001|Take 001|BaseLayer.001"].play();
+    actions["ExportGrp.002|Take 001|BaseLayer"].play();
   }, []);
 
   armColorMap.flipY = false;
@@ -205,11 +205,15 @@ function KingMotion({ ...props }) {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <group position={[0, -1, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.015}>
+      <group
+        position={[0, -1, 0]}
+        rotation={[Math.PI / 2.4, 0, 0]}
+        scale={0.015}
+      >
         <primitive object={nodes.World} />
         <skinnedMesh
           geometry={nodes.arm_mesh.geometry}
-          material={materials.arm}
+          material={materials.arm1}
           skeleton={nodes.arm_mesh.skeleton}
         >
           <meshStandardMaterial
@@ -223,7 +227,7 @@ function KingMotion({ ...props }) {
         </skinnedMesh>
         <skinnedMesh
           geometry={nodes.belt_mesh.geometry}
-          material={materials.belt}
+          material={materials.belt1}
           skeleton={nodes.belt_mesh.skeleton}
         >
           <meshStandardMaterial
@@ -236,9 +240,9 @@ function KingMotion({ ...props }) {
           />
         </skinnedMesh>
         <skinnedMesh
-          geometry={nodes.Mesh007.geometry}
-          material={materials.lambert2}
-          skeleton={nodes.Mesh007.skeleton}
+          geometry={nodes.Mesh029.geometry}
+          material={materials.lambert26}
+          skeleton={nodes.Mesh029.skeleton}
         >
           <meshStandardMaterial
             metalness={1}
@@ -250,9 +254,9 @@ function KingMotion({ ...props }) {
           />
         </skinnedMesh>
         <skinnedMesh
-          geometry={nodes.Mesh007_1.geometry}
-          material={materials.body}
-          skeleton={nodes.Mesh007_1.skeleton}
+          geometry={nodes.Mesh029_1.geometry}
+          material={materials.body1}
+          skeleton={nodes.Mesh029_1.skeleton}
         >
           <meshStandardMaterial
             metalness={1}
@@ -265,7 +269,7 @@ function KingMotion({ ...props }) {
         </skinnedMesh>
         <skinnedMesh
           geometry={nodes.bodyarmor_mesh.geometry}
-          material={materials.bodyarmor}
+          material={materials.bodyarmor1}
           skeleton={nodes.bodyarmor_mesh.skeleton}
         >
           <meshStandardMaterial
@@ -279,7 +283,7 @@ function KingMotion({ ...props }) {
         </skinnedMesh>
         <skinnedMesh
           geometry={nodes.cloak_mesh.geometry}
-          material={materials.cloak}
+          material={materials.cloak1}
           skeleton={nodes.cloak_mesh.skeleton}
         >
           <meshStandardMaterial
@@ -293,7 +297,7 @@ function KingMotion({ ...props }) {
         </skinnedMesh>
         <skinnedMesh
           geometry={nodes.helmet_mesh.geometry}
-          material={materials.helmet}
+          material={materials.helmet1}
           skeleton={nodes.helmet_mesh.skeleton}
         >
           <meshStandardMaterial
@@ -307,7 +311,7 @@ function KingMotion({ ...props }) {
         </skinnedMesh>
         <skinnedMesh
           geometry={nodes.pant_mesh.geometry}
-          material={materials.pant}
+          material={materials.pant1}
           skeleton={nodes.pant_mesh.skeleton}
         >
           <meshStandardMaterial
@@ -321,7 +325,7 @@ function KingMotion({ ...props }) {
         </skinnedMesh>
         <skinnedMesh
           geometry={nodes.shoes_mesh.geometry}
-          material={materials.shoes}
+          material={materials.shoes1}
           skeleton={nodes.shoes_mesh.skeleton}
         >
           <meshStandardMaterial
@@ -335,12 +339,16 @@ function KingMotion({ ...props }) {
         </skinnedMesh>
       </group>
 
-      <group position={[0, -1, 0]} rotation={[Math.PI / 2, 0, 0]} scale={0.015}>
+      <group
+        position={[0, -1, 0]}
+        rotation={[Math.PI / 2.4, 0, 0]}
+        scale={0.015}
+      >
         <primitive object={nodes.World_1} />
         <skinnedMesh
-          geometry={nodes.Mesh008.geometry}
-          material={nodes.Mesh008.material}
-          skeleton={nodes.Mesh008.skeleton}
+          geometry={nodes.Mesh030.geometry}
+          material={nodes.Mesh030.material}
+          skeleton={nodes.Mesh030.skeleton}
         >
           <meshStandardMaterial
             metalness={1}
@@ -352,9 +360,9 @@ function KingMotion({ ...props }) {
           />
         </skinnedMesh>
         <skinnedMesh
-          geometry={nodes.Mesh008_1.geometry}
-          material={nodes.Mesh008_1.material}
-          skeleton={nodes.Mesh008_1.skeleton}
+          geometry={nodes.Mesh030_1.geometry}
+          material={nodes.Mesh030_1.material}
+          skeleton={nodes.Mesh030_1.skeleton}
         >
           <meshStandardMaterial
             metalness={1}
