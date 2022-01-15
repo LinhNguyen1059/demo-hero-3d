@@ -17,6 +17,7 @@ import KingMotion from "./components/king/KingMotion";
 
 import "./App.css";
 import { SpotLightHelper } from "three";
+import WarriorPose from "./components/warrior/warrior";
 
 export default function App() {
   const [hero, setHero] = React.useState("KingVFX");
@@ -100,17 +101,17 @@ export default function App() {
           ref={canvasRef}
           gl={{ preserveDrawingBuffer: true }}
         >
-          <ambientLight intensity={0.5} />
-          <spotLight
+          {/* <ambientLight intensity={0.5} /> */}
+          {/* <spotLight
             intensity={0.1}
             angle={0.1}
             penumbra={1}
             position={[10, 15, 10]}
             castShadow
-          />
+          /> */}
           <Suspense fallback={<Loader />}>
             {/* {renderHeroComponent()} */}
-            <KingMotion colorBases={colorBases} />
+            <WarriorPose colorBases={colorBases} />
             <Environment preset="sunset" />
             <ContactShadows
               rotation-x={Math.PI / 2}
@@ -123,12 +124,12 @@ export default function App() {
             />
           </Suspense>
           <OrbitControls
-            minPolarAngle={Math.PI / 2}
-            maxPolarAngle={Math.PI / 2}
-            enableZoom={false}
-            enablePan={false}
-            // autoRotate
-            // rotateSpeed={1}
+          // minPolarAngle={Math.PI / 2}
+          // maxPolarAngle={Math.PI / 2}
+          // enableZoom={false}
+          // enablePan={false}
+          // autoRotate
+          // rotateSpeed={1}
           />
         </Canvas>
       </div>
